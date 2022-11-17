@@ -27,15 +27,16 @@ import Bankgrade from '../public/5553 1.svg'
 function HomePage() {
   return (
     <div className='HomePage'>
+
+      {/* Header  */}
       <SimpleGrid columns={{base:1, sm:2}} spacing={5} bg='#F6F6F6'>
       <Box display={{base:'block', sm:"flex"}} alignItems="center" bg='white' height={{base:'200px', sm:'549px'}} px={{base:'0', sm:'20'}}>
        <Box p={'3'}>
-       <Box bg='red' display={{base:'block', sm:'none'}} height={'450px'}>
-        <Image 
+       <Box bg='white' display={{base:'block', sm:'none'}} height={'450px'}>
+        <Image  
         src={HeaderImg} 
         alt="Picture of the author"
-        // width={328}
-        // height={253}
+        priority={'true'}
         />
         <div className='playIcon'  
         bg={'red'} 
@@ -43,8 +44,8 @@ function HomePage() {
         ><MdPlayCircleFilled color='red' size='52px'/></div>
       </Box>
        <Heading fontWeight={'semibold'} size='2xl' textAlign={{base:'center'}}>Conserve for the Generations to <span>come</span></Heading>
-        <Text py={'4'} textAlign={{base:'center'}}>Invest in low risk, high impact solar energy projects and earn rental income for up to 20years. </Text>
-        <ButtonGroup variant='solid' spacing='6' pt={'6'}>
+        <Text py={'4'} px={{base:'70px'}} textAlign={{base:'center'}}>Invest in low risk, high impact solar energy projects and earn rental income for up to 20years. </Text>
+        <ButtonGroup variant='solid' spacing='6' pt={'6'} display={{base:'flex'}} justifyContent={{base:"center"}}>
           <Button
            px='40px'
            borderRadius='12px'
@@ -55,7 +56,6 @@ function HomePage() {
            boxShadow='9px 23px 34px rgba(5, 195, 221, 0.31)'
            >View Available Project</Button>
           <Button
-          // as='button'
           px='40px'
           borderRadius='12px'
           fontSize='13px'
@@ -64,11 +64,11 @@ function HomePage() {
           color='#4b4f56'
           boxShadow='9px 23px 34px rgba(5, 195, 221, 0.31)'
           >Get Started</Button>
-      </ButtonGroup>
+        </ButtonGroup>
        </Box>
       </Box>
       <Box bg={{base:'white', sm:'#F6F6F6'}} display={{base:'none', sm:'block'}} height={{base:'200px', sm:'533px'}} pl={'4'} pt={'8'}>
-        <Image 
+        <Image  
         src={HeaderImg} 
         alt="Picture of the author"
         width={550}
@@ -86,29 +86,31 @@ function HomePage() {
 
 
 
+      {/* main  */}
+      {/* Section 1  */}
       <div className='Section1'>
-        <Heading fontWeight={'semibold'} size='2xl'><Center>Why Sunglo</Center></Heading>
-        <Text pt={'6'}><Center>Enjoy the benefits of investing in a high-quality solar project.
-           Purchase a portfolio plan <br /> with a minimum purchase of one kilo-watt. </Center></Text>
+        <Heading fontWeight={'semibold'} size={{base:'xl',sm:'2xl'}}><Center>Why Sunglo</Center></Heading>
+        <Text pt={'6'}>Enjoy the benefits of investing in a high-quality solar project.
+           Purchase a portfolio plan <br /> with a minimum purchase of one kilo-watt. </Text>
        <div className="WhyBullets">
         <SimpleGrid columns={{base:1, sm:2}} spacing={10}>
           <Box h={'500px'} bg={'white'} p='10' borderRadius={'10px'} boxShadow='4px 4px 10px rgba(54, 219, 241, 0.15)'>
-          <Box mx={'130px'}>
-              <Image src={why1} />
-              </Box>
+          <Box mx={{base:'42',sm:'130px'}}>
+              <Image  src={why1} alt="Picture of the author"/>
+          </Box>
             <Heading my={'20px'} fontWeight={'semibold'} fontSize={'25px'}>Earn with  purpose</Heading>
             <Text>Just like the way you purchase real estate you can purchase solar cells then lease them out to schools, businesses, communities in an emerging economy.</Text>
           </Box>
           <Box  bg={'white'} p='10' borderRadius={'10px'} boxShadow=' -4px 4px 10px rgba(54, 219, 241, 0.15);'>
               <Heading mt={'40px'} fontWeight={'semibold'} fontSize={'25px'}>Energy Asset Diversification</Heading>
               <Text mt={'30px'}>You can diversify your solar asset portfolio across different industries to increase your impact and earn more rental income while balancing your risk portfolio.</Text>
-              <Box mx={'130px'} mt={'80px'}>
-              <Image src={why2} />
+              <Box mx={{base:'42',sm:'130px'}} mt={'80px'}>
+              <Image  src={why2} alt="Picture of the author"/>
               </Box>
             </Box>
-            <Box h={'500px'} bg={'white'} p='10' borderRadius={'10px'} boxShadow='4px 4px 10px rgba(54, 219, 241, 0.15)'>
-            <Box mx={'138px'} mt={'20px'}>
-              <Image src={why3} />
+            <Box h={{base:'550px', sm:'500px'}} bg={'white'} p='10' borderRadius={'10px'} boxShadow='4px 4px 10px rgba(54, 219, 241, 0.15)'>
+            <Box mx={{base:'42',sm:'130px'}} mt={'20px'}>
+              <Image  src={why3} alt="Picture of the author"/>
               </Box>
             <Heading mt={'40px'} fontWeight={'semibold'} fontSize={'25px'}>No Volatility</Heading>
             <Text mt={'38px'}>Unlike Stocks, Crypto, ETFs. Investing in solar projects has no market volatility, We identify empty roof spaces of high impact commercial energy consumers and lease out your solar cells 
@@ -118,24 +120,26 @@ function HomePage() {
               <Heading my={'20px'} fontWeight={'semibold'} fontSize={'25px'}>Best-In-Class Solar Projects</Heading>
               <Text>All the Solar Project options listed on Sunglo, are carefully screened and vetted, managed by energy professionals and fund managers. All the diverse energy investments 
                 are managed by a third-party custodian structure and are fully insured with asset warranty from original equipment manufacturers. </Text>
-                <Box mx={'130px'}>
-              <Image src={why4} />
+                <Box mx={{base:'42',sm:'130px'}}>
+              <Image  src={why4} alt="Picture of the author"/>
               </Box>
             </Box>
         </SimpleGrid>
        </div>
        </div>
 
+
+         {/* Section 2  */}
        <div className="Section2">
-       <Heading mb={'100px'} fontSize={'xl'}>Invest on the go. Anywhere, anytime...</Heading>
+       <Heading mb={{base:'70px', sm:'100px'}} fontSize={{base:'l', sm:'xl'}}>Invest on the go. Anywhere, anytime...</Heading>
        <div>
        <SimpleGrid columns={{base:1, sm:2}} spacing={5}>
-          <Box>
-            <Image src={mobiledesktop} />
+          <Box px={{base:'30px'}}>
+            <Image  src={mobiledesktop} alt="Picture of the author"/>
           </Box>
           <Box display={'flex'} alignItems={'center'}>
            <Box>
-           <Heading mb={'15px'} fontSize={'2xl'}>The easy way to own your share</Heading>
+           <Heading mb={'15px'} mt={{base:'10'}} fontSize={{base:'xl', sm:'2xl'}}>The easy way to own your share</Heading>
             <Text  mb={'15px'}>Income-producing power plants across Africa Sunglo is an exclusive peer 
               to peer leasing platform to purchase and own your share of an income-producing 
               solar plant, right from your mobile phone or computer.</Text>
@@ -157,30 +161,30 @@ function HomePage() {
        </div>
         <div>
         <Center mt={'150px'} mb={'70px'}><Heading fontSize={'3xl'}>How To Invest</Heading></Center>
-        <Heading mb={'10px'} fontSize={'xl'}>Put Your Money to work while doing good</Heading>
+        <Heading mb={'10px'} fontSize={{base:'l', sm:'3xl'}}>Put Your Money to work while doing good</Heading>
         <Text>Join a global community from all corners of the world that's solar powering the planet and 
           creating a sustainable energy future.</Text>
 
       <div>
       <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={{base:'2px', sm:'20px'}}> 
-          <Heading fontSize={'2xl'}>SignUp</Heading>
-          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Register to become a member of the Sunglo Impact Investing community.</Text>
+        <Box borderRadius={{base:'6px', sm:'12px'}} w={{base:'40px', sm:'50px'}} h={{base:'80px', sm:'50px'}} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml='18px'> 
+          <Heading fontSize={{base:'xl',sm:'2xl'}}>SignUp</Heading>
+          <Text w={{base:'100%', sm:'400px'}} my={{base:'10px',sm:'15px'}}>Register to become a member of the Sunglo Impact Investing community.</Text>
           </Box>
        </Box>
        <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={{base:'2px', sm:'20px'}}> 
-          <Heading fontSize={'2xl'}>Discover</Heading>
-          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Discover new and impactful solar project opportunities across multiple industries.</Text>
+        <Box borderRadius={{base:'6px', sm:'12px'}} w={{base:'40px', sm:'50px'}} h={{base:'80px', sm:'50px'}} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml='18px'> 
+          <Heading fontSize={{base:'xl',sm:'2xl'}}>Discover</Heading>
+          <Text w={{base:'100%', sm:'400px'}} my={{base:'10px',sm:'15px'}}>Discover new and impactful solar project opportunities across multiple industries.</Text>
           </Box>
        </Box>
        <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={{base:'2px', sm:'20px'}}> 
-          <Heading fontSize={'2xl'}>Invest in Solar Cells</Heading>
-          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Purchase and lease out your solar cell and start earning from the sun. </Text>
+        <Box borderRadius={{base:'6px', sm:'12px'}} w={{base:'40px', sm:'50px'}} h={{base:'80px', sm:'50px'}} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml='18px'> 
+          <Heading fontSize={{base:'xl',sm:'2xl'}}>Invest in Solar Cells</Heading>
+          <Text w={{base:'100%', sm:'400px'}} my={{base:'10px',sm:'15px'}}>Purchase and lease out your solar cell and start earning from the sun. </Text>
           </Box>
        </Box>
       </div>
@@ -188,7 +192,7 @@ function HomePage() {
        <div>
        <Center mt={'100px'} mb={'50px'}><Heading fontSize={'3xl'}>Featured Project</Heading></Center>
        <div className='featured'>
-        <Image src={Panels} />
+        <Image  src={Panels} alt="Picture of the author"/>
         <div className="darktheme">
         <div className='featuredplayIcon'  
           bg={'red'} 
@@ -233,7 +237,7 @@ function HomePage() {
         <Box display= {{base:'block', sm:'flex'}} mt={'300px'}>
           <Box>
           <Heading mb={'10px'} fontSize={'3xl'}>We ensure your Solar <br /> Asset  is well  protected</Heading>
-          <Text w={'392px'}>We follow a transparent and simplified structure that ensures solar asset ownership is managed and protected by our engineering, 
+          <Text w={{base:'100%', sm:'392'}}>We follow a transparent and simplified structure that ensures solar asset ownership is managed and protected by our engineering, 
             technical and institutional partners that include:</Text>
             <Button
               mt={'20px'}
@@ -247,16 +251,16 @@ function HomePage() {
               >Get Started</Button>
           </Box>
           <Box mt={{base: '20px', sm:'-40px'}}>
-            <Image src={solarAsset} height={'400'} width={'1000'} />
+            <Image  src={solarAsset} alt="Picture of the author" height={'400'} width={'1000'} />
           </Box>
         </Box>
         <Box display={{base:'block', sm:'flex'}} mt={'200px'}>
           <Box  mt={{base: '0', sm:'-70px'}}>
-              <Image src={Bankgrade} height={'400'} width={'1000'} />
+              <Image  src={Bankgrade} alt="Picture of the author" height={'400'} width={'1000'} />
           </Box>
           <Box mt={'20px'}>
           <Heading mb={'10px'} fontSize={'3xl'}>Bank-grade Security</Heading>
-          <Text w={'392px'}>Our payment processors are PCI-DSS compliant to ensure the security
+          <Text w={{base:'100%', sm:'392'}}>Our payment processors are PCI-DSS compliant to ensure the security
            of your data electronically. All cards and bank data are encrypted to prevent unauthorized 
            access to sensitive information.</Text>
             <Button

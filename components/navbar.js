@@ -35,9 +35,9 @@ const NavDrawer =()=>{
   
     return (
       <>
-        <Button ref={btnRef} bg={'white'} onClick={onOpen}>
+        <Box ref={btnRef} bg={'white'} onClick={onOpen}>
           <FaBars color='black' size={'30'} />
-        </Button>
+        </Box>
         <Drawer
           isOpen={isOpen}
           placement='right'
