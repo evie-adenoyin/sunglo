@@ -26,8 +26,8 @@ import Bankgrade from '../public/5553 1.svg'
 
 function HomePage() {
   return (
-    <div className='main'>
-      <SimpleGrid columns={{base:1, sm:2}} spacing={5} bg='#F6F6F6'>
+    <div className='HomePage'>
+      {/* <SimpleGrid columns={{base:1, sm:2}} spacing={5} bg='#F6F6F6'>
       <Box display="flex" alignItems="center" bg='white' height={{base:'200px', sm:'549px'}} px={'20'}>
        <Box pl={'8'}>
        <Heading fontWeight={'semibold'} size='2xl'>Conserve for the Generations to come</Heading>
@@ -70,7 +70,7 @@ function HomePage() {
         top={'52px'}
         ><MdPlayCircleFilled color='red' size='52px'/></div>
       </Box>
-      </SimpleGrid>
+      </SimpleGrid> */}
       <div className='Section1'>
         <Heading fontWeight={'semibold'} size='2xl'><Center>Why Sunglo</Center></Heading>
         <Text pt={'6'}><Center>Enjoy the benefits of investing in a high-quality solar project.
