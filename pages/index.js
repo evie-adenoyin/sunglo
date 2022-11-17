@@ -83,6 +83,9 @@ function HomePage() {
         ><MdPlayCircleFilled color='red' size='52px'/></div>
       </Box>
       </SimpleGrid>
+
+
+
       <div className='Section1'>
         <Heading fontWeight={'semibold'} size='2xl'><Center>Why Sunglo</Center></Heading>
         <Text pt={'6'}><Center>Enjoy the benefits of investing in a high-quality solar project.
@@ -160,24 +163,24 @@ function HomePage() {
 
       <div>
       <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={'50px'} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={'20px'}> 
+        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml={{base:'2px', sm:'20px'}}> 
           <Heading fontSize={'2xl'}>SignUp</Heading>
-          <Text w={'400px'} my={'15px'}>Register to become a member of the Sunglo Impact Investing community.</Text>
+          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Register to become a member of the Sunglo Impact Investing community.</Text>
           </Box>
        </Box>
        <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={'50px'} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={'20px'}> 
+        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml={{base:'2px', sm:'20px'}}> 
           <Heading fontSize={'2xl'}>Discover</Heading>
-          <Text w={'400px'} my={'15px'}>Discover new and impactful solar project opportunities across multiple industries.</Text>
+          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Discover new and impactful solar project opportunities across multiple industries.</Text>
           </Box>
        </Box>
        <Box display={'flex'} mt={'35px'}>
-        <Box borderRadius={'12px'} w={'50px'} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
-        <Box ml={'20px'}> 
+        <Box borderRadius={'12px'} w={{base:'20px', sm:'50px'}} h={'50px'} bg={'#ECECEC'} mt={'10px'}></Box>
+        <Box ml={{base:'2px', sm:'20px'}}> 
           <Heading fontSize={'2xl'}>Invest in Solar Cells</Heading>
-          <Text w={'400px'} my={'15px'}>Purchase and lease out your solar cell and start earning from the sun. </Text>
+          <Text w={{base:'100%', sm:'400px'}} my={'15px'}>Purchase and lease out your solar cell and start earning from the sun. </Text>
           </Box>
        </Box>
       </div>
@@ -208,7 +211,7 @@ function HomePage() {
         </Center>
       </div>
       <div>
-        <Box display={'flex'} justifyContent={'center'} mt={'35px'}>
+        <Box display= {{base:'block', sm:'flex'}} justifyContent={'center'} mt={'35px'}>
           <Box mx={'5'} px={'50px'} py={'19px'} variant='outline' border={'1px'} borderColor={'#05C3DD'} borderRadius={'11'}>
           <Text>An SEC licensed trustee</Text>
           </Box>
@@ -216,7 +219,7 @@ function HomePage() {
           <Text>Strong Technology Partners</Text>
           </Box>
         </Box>
-        <Box display={'flex'} justifyContent={'center'} mt={'35px'}>
+        <Box display= {{base:'block', sm:'flex'}} justifyContent={'center'} mt={'35px'}>
           <Box mx={'5'} px={'50px'} py={'19px'} variant='outline' border={'1px'} borderColor={'#05C3DD'} borderRadius={'11'}>
           <Text>Experienced solar energy developers</Text>
           </Box>
@@ -227,8 +230,8 @@ function HomePage() {
       </div>
 
       <div>
-        <Box display={'flex'} mt={'300px'}>
-          <Box >
+        <Box display= {{base:'block', sm:'flex'}} mt={'300px'}>
+          <Box>
           <Heading mb={'10px'} fontSize={'3xl'}>We ensure your Solar <br /> Asset  is well  protected</Heading>
           <Text w={'392px'}>We follow a transparent and simplified structure that ensures solar asset ownership is managed and protected by our engineering, 
             technical and institutional partners that include:</Text>
@@ -243,13 +246,13 @@ function HomePage() {
               boxShadow='9px 23px 34px rgba(5, 195, 221, 0.31)'
               >Get Started</Button>
           </Box>
-          <Box mt={'-40'}>
+          <Box mt={{base: '20px', sm:'-40px'}}>
             <Image src={solarAsset} height={'400'} width={'1000'} />
           </Box>
         </Box>
-        <Box display={'flex'} mt={'200px'}>
-        <Box  mt={'-70px'}>
-            <Image src={Bankgrade} height={'400'} width={'1000'} />
+        <Box display={{base:'block', sm:'flex'}} mt={'200px'}>
+          <Box  mt={{base: '0', sm:'-70px'}}>
+              <Image src={Bankgrade} height={'400'} width={'1000'} />
           </Box>
           <Box mt={'20px'}>
           <Heading mb={'10px'} fontSize={'3xl'}>Bank-grade Security</Heading>

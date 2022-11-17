@@ -116,4 +116,14 @@ span{
   padding: 40px 10px;
   width: 100%;
  }
+ body{
+  background-color: black;
+ }
+
+ .Section1{
+  background-color: #F6F6F6;
+  margin-top: 40rem;
+  padding: 120px 10px;
+  text-align: center;
+}
 }
