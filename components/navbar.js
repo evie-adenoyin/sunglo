@@ -77,7 +77,6 @@ export default function Navbar() {
     const DesktopNavebar  = {base:'none', sm:'block'}
     const MobileNavebar  = {base:'block', sm:'none'}
     const MobileWidth  = {base:'100%', sm:'auto'}
-    const NavLinks = {base:'block', sm:'inline'}
     
   return (
     <>

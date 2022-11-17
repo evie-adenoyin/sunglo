@@ -27,11 +27,23 @@ import Bankgrade from '../public/5553 1.svg'
 function HomePage() {
   return (
     <div className='HomePage'>
-      {/* <SimpleGrid columns={{base:1, sm:2}} spacing={5} bg='#F6F6F6'>
-      <Box display="flex" alignItems="center" bg='white' height={{base:'200px', sm:'549px'}} px={'20'}>
-       <Box pl={'8'}>
-       <Heading fontWeight={'semibold'} size='2xl'>Conserve for the Generations to come</Heading>
-        <Text py={'4'}>Invest in low risk, high impact solar energy projects and earn rental income for up to 20years. </Text>
+      <SimpleGrid columns={{base:1, sm:2}} spacing={5} bg='#F6F6F6'>
+      <Box display={{base:'block', sm:"flex"}} alignItems="center" bg='white' height={{base:'200px', sm:'549px'}} px={{base:'0', sm:'20'}}>
+       <Box p={'3'}>
+       <Box bg='red' display={{base:'block', sm:'none'}} height={'450px'}>
+        <Image 
+        src={HeaderImg} 
+        alt="Picture of the author"
+        // width={328}
+        // height={253}
+        />
+        <div className='playIcon'  
+        bg={'red'} 
+        variant='solid'
+        ><MdPlayCircleFilled color='red' size='52px'/></div>
+      </Box>
+       <Heading fontWeight={'semibold'} size='2xl' textAlign={{base:'center'}}>Conserve for the Generations to <span>come</span></Heading>
+        <Text py={'4'} textAlign={{base:'center'}}>Invest in low risk, high impact solar energy projects and earn rental income for up to 20years. </Text>
         <ButtonGroup variant='solid' spacing='6' pt={'6'}>
           <Button
            px='40px'
@@ -55,7 +67,7 @@ function HomePage() {
       </ButtonGroup>
        </Box>
       </Box>
-      <Box bg='#F6F6F6' height={{base:'200px', sm:'533px'}} pl={'4'} pt={'8'}>
+      <Box bg={{base:'white', sm:'#F6F6F6'}} display={{base:'none', sm:'block'}} height={{base:'200px', sm:'533px'}} pl={'4'} pt={'8'}>
         <Image 
         src={HeaderImg} 
         alt="Picture of the author"
@@ -70,7 +82,7 @@ function HomePage() {
         top={'52px'}
         ><MdPlayCircleFilled color='red' size='52px'/></div>
       </Box>
-      </SimpleGrid> */}
+      </SimpleGrid>
       <div className='Section1'>
         <Heading fontWeight={'semibold'} size='2xl'><Center>Why Sunglo</Center></Heading>
         <Text pt={'6'}><Center>Enjoy the benefits of investing in a high-quality solar project.
