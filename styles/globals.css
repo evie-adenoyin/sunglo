@@ -17,7 +17,10 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+span{
+  color: #01FFFF;
+}
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -25,17 +28,11 @@ a {
     color: white;
     background: #F6F6F6;
   }
-}
+} */
 
-span{
-  color: #01FFFF;
-}
+
 
 /* Component Styles */
-
-.HomePage{
-  width: 100%;
-}
 
 /* Navbar  */
 .Navbar{
@@ -67,20 +64,34 @@ span{
 }
 
 .featured{
-  position: relative;
+  background-image: url('../public/panels.png');
+  filter: brightness(50%);
+  height: 20rem;
 }
 
-.darktheme{
+
+/* .featured:before {
+  content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+      opacity: .6; 
+} */
+
+/* .darktheme{
   background-color: rgba(0, 0, 0, 0.24);
   height: 19rem;
   position: relative;
-  top: -19rem;
-}
+  z-index: 1;
+} */
 
 .featuredplayIcon{
   position: absolute;
   top: 8rem;
-  right: 35rem;
+  left: 33rem;
   background-color: white;
   padding: 3px;
   width: 60px;
@@ -88,6 +99,7 @@ span{
   display: flex;
   align-items: center;
   border-radius: 50px;
+  z-index: 1;
 }
 
 /* .main{
@@ -107,6 +119,10 @@ span{
   margin-top: 8rem;
 }
 
+/* .HeaderText{
+  text-align: left;
+} */
+
 
 
 @media (max-width: 720px) {
@@ -121,7 +137,7 @@ span{
  .Section1{
   background-color: #F6F6F6;
   margin-top: 45rem;
-  padding: 50px 10px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -141,7 +157,30 @@ span{
   align-items: center;
   border-radius: 50px;
 }
-.featured img{
-  height: 10rem;
+
+.featured{
+  background-image: url('../public/Rectangle\ 1402.png');
+  filter: brightness(50%);
+  height: 15rem;
 }
+
+
+.featuredplayIcon{
+  position: relative;
+  top: 5rem;
+  left: 7rem;
+  background-color: white;
+  padding: 3px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.WhyBullets{
+  margin-top: 3rem;
+}
+
+
 }

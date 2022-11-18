@@ -15,7 +15,7 @@ import {
     DrawerContent,
     DrawerCloseButton,
     useDisclosure,
-    Input
+    Text
     } 
 from '@chakra-ui/react'
 import {FaBars} from 'react-icons/fa'
@@ -35,8 +35,8 @@ const NavDrawer =()=>{
   
     return (
       <>
-        <Box ref={btnRef} bg={'white'} onClick={onOpen}>
-          <FaBars color='black' size={'30'} />
+        <Box ref={btnRef} bg={'white'} mt={'20px'} onClick={onOpen}>
+          <FaBars color='black' size={'20'} />
         </Box>
         <Drawer
           isOpen={isOpen}
@@ -46,24 +46,34 @@ const NavDrawer =()=>{
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton />
+            <DrawerCloseButton color={'#1EBDD0'}/>
             <DrawerHeader></DrawerHeader>
   
             <DrawerBody>
                 <Box>
-                <Link display={'block'} w='100%' mx={'4'} _hover={textDecoration} href='/about'>About Us</Link>
-                <Link display={'block'} w='100%' mx={'4'} _hover={textDecoration} >Why Us</Link>
-                <Link display={'block'} w='100%' mx={'4'} _hover={textDecoration} >Projects</Link>
-                <Link display={'block'} w='100%' mx={'4'} _hover={textDecoration} >How To Invest</Link>
-                <Link display={'block'} w='100%' mx={'4'} _hover={textDecoration} >Company</Link>
+                <Link href='/about' display={'block'} w='100%' my={'6'} _hover={textDecoration} >About Us</Link>
+                <Link href='/whyus' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Why Us</Link>
+                <Link href='/projects' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Projects</Link>
+                <Link href='/howtoinvest' display={'block'} w='100%' my={'6'} _hover={textDecoration} >How To Invest</Link>
+                <Link href='/company' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Company</Link>
+                <Link href='/openpositions' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Careers</Link>
+                <Button
+                  mt={'20px'}
+                  px='40px'
+                  borderRadius='12px'
+                  fontSize='13px'
+                  fontWeight='semibold'
+                  bg='#01FFFF'
+                  color='#4b4f56'
+                  // w={'220px'}
+                  boxShadow='9px 23px 34px rgba(5, 195, 221, 0.31)'
+                  >Get started
+              </Button>
                 </Box>
             </DrawerBody>
   
             <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='blue'>Save</Button>
+              <Text>UI design by <Link _hover={textDecoration}>Eferigho Runo</Link></Text>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
@@ -90,11 +100,11 @@ export default function Navbar() {
         </Box>
         <Spacer />
         <Box  display={DesktopNavebar}>
-            <Link w='100%' mx={'4'} _hover={textDecoration} href='/about'>About Us</Link>
-            <Link w='100%' mx={'4'} _hover={textDecoration} >Why Us</Link>
-            <Link w='100%' mx={'4'} _hover={textDecoration} >Projects</Link>
-            <Link w='100%' mx={'4'} _hover={textDecoration} >How To Invest</Link>
-            <Link w='100%' mx={'4'} _hover={textDecoration} >Company</Link>
+            <Link href='/about' w='100%' mx={'4'} _hover={textDecoration}>About Us</Link>
+            <Link href='/whyus'  w='100%' mx={'4'} _hover={textDecoration} >Why Us</Link>
+            <Link href='/projects' w='100%' mx={'4'} _hover={textDecoration} >Projects</Link>
+            <Link href='/howtoinvest' w='100%' mx={'4'} _hover={textDecoration} >How To Invest</Link>
+            <Link href='/company' w='100%' mx={'4'} _hover={textDecoration} >Company</Link>
         </Box>
         <Spacer />
         <Box display={DesktopNavebar}>
