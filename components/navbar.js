@@ -19,12 +19,13 @@ import {
     } 
 from '@chakra-ui/react'
 import {FaBars} from 'react-icons/fa'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const textDecoration = { textDecoration: 'none' }
 const Logo =()=>{
     return(
-        <Box p='2'>
-            <Heading size='lg' fontWeight={'normal'}>Logo</Heading>
+        <Box p='2' ml={{sm:'-10px', base:'0'}}>
+            <Heading size='lg' fontWeight={'normal'}><Link fontWeight='semibold' href='/' display={'block'} _hover={textDecoration} >Logo</Link></Heading>
         </Box>
     )
 }
@@ -35,7 +36,7 @@ const NavDrawer =()=>{
   
     return (
       <>
-        <Box ref={btnRef} bg={'white'} mt={'20px'} onClick={onOpen}>
+        <Box ref={btnRef} bg={'white'} mt={'16px'} onClick={onOpen}>
           <FaBars color='black' size={'20'} />
         </Box>
         <Drawer
@@ -50,7 +51,9 @@ const NavDrawer =()=>{
             <DrawerHeader></DrawerHeader>
   
             <DrawerBody>
+                <Link fontSize='20px' fontWeight='semibold' href='/' display={'block'} _hover={textDecoration} >Logo</Link>
                 <Box>
+                <Link href='/' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Home</Link>
                 <Link href='/about' display={'block'} w='100%' my={'6'} _hover={textDecoration} >About Us</Link>
                 <Link href='/whyus' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Why Us</Link>
                 <Link href='/projects' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Projects</Link>
@@ -73,7 +76,7 @@ const NavDrawer =()=>{
             </DrawerBody>
   
             <DrawerFooter>
-              <Text>UI design by <Link _hover={textDecoration}>Eferigho Runo</Link></Text>
+              <Text fontSize={{base:'sm'}}>UI design by <Link _hover={textDecoration}>Nicole Eferigho Runo</Link></Text>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
@@ -90,6 +93,7 @@ export default function Navbar() {
     
   return (
     <>
+    <ChakraProvider>
     <div className='Navbar'>
  
     <Box>
@@ -126,6 +130,7 @@ export default function Navbar() {
     </Flex>
     </Box>
     </div>
+    </ChakraProvider>
     </>
   )
 }

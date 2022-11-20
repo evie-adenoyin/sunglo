@@ -21,7 +21,7 @@ import mobiledesktop from '../public/Group 2033.png'
 import Panels from '../public/panels.png'
 import solarAsset from '../public/man.svg'
 import Bankgrade from '../public/5553 1.svg'
-
+import Layout from '../components/layout'
 
 
 function HomePage() {
@@ -285,6 +285,14 @@ function HomePage() {
     </div>
   )
 }
+
+
+HomePage.getLayout = function getLayout(page) {
+  return (
+    <Layout>{page}</Layout>
+  )
+}
+
 
 export default HomePage
 

@@ -2,6 +2,7 @@ import React from 'react'
 import PagenotFound from '../public/404.png' 
 import Image from 'next/image'
 import { Box, Text, Link } from '@chakra-ui/react'
+import Layout from '../components/layout'
 
 
 const NotFound = () => {
@@ -37,6 +38,12 @@ const NotFound = () => {
            
         </Box>
     </div>
+  )
+}
+
+NotFound.getLayout = function getLayout(page) {
+  return (
+    <Layout>{page}</Layout>
   )
 }
 

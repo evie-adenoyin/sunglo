@@ -11,8 +11,9 @@ import {
     GridItem 
   } 
 from '@chakra-ui/react'
-
+import Layout from '../components/layout'
 import { FaMapMarker } from "react-icons/fa";
+import NestedLayout from '../components/nestedlayout';
 
 
 
@@ -151,5 +152,12 @@ const OpenPositions = () => {
     </div>
   )
 }
+
+OpenPositions.getLayout = function getLayout(page) {
+    return (
+     <Layout>{page}</Layout> 
+    )
+  }
+
 
 export default OpenPositions

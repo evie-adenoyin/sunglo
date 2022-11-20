@@ -16,6 +16,7 @@ import {
     AccordionIcon,
   } 
 from '@chakra-ui/react'
+import Layout from '../components/layout'
 
 
 
@@ -149,5 +150,11 @@ const FAQs = () => {
     </div>
   )
 }
+
+FAQs.getLayout = function getLayout(page) {
+    return (
+      <Layout>{page}</Layout>
+    )
+  }
 
 export default FAQs

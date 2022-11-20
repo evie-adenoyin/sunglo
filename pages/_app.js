@@ -3,13 +3,19 @@ import Layout from '../components/layout'
 import { ChakraProvider } from '@chakra-ui/react'
 
 function MyApp({ Component, pageProps }) {
-  return (
+  const getLayout = Component.getLayout || ((page) => page)
+  return getLayout(
   <ChakraProvider>
-    <Layout className='Layout'>
-      <Component {...pageProps} />
-    </Layout>
+    <Component {...pageProps} />
   </ChakraProvider>
   )
+  // return(
+  //   <ChakraProvider>
+  //     <Layout>
+  //       <Component {...pageProps} />
+  //     </Layout>
+  //  </ChakraProvider>
+  // )
 }
 
 export default MyApp

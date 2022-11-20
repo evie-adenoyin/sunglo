@@ -16,7 +16,7 @@ from '@chakra-ui/react'
 import Image from 'next/image'
 import ContactImg from '../public/contact.png'
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPhone, FaEnvelope, FaMapMarker } from "react-icons/fa";
-
+import Layout from '../components/layout'
 
 const Contact = () => {
     const DisplayGrid = {base:'block', sm:'flex'}
@@ -140,5 +140,11 @@ const Contact = () => {
     </div>
   )
 }
+
+Contact.getLayout = function getLayout(page) {
+    return (
+      <Layout>{page}</Layout>
+    )
+  }
 
 export default Contact

@@ -13,6 +13,7 @@ import {
 from '@chakra-ui/react'
 // import { useFormik, Formik } from "formik";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { ChakraProvider } from '@chakra-ui/react'
 
 const Footer = ()=>{
      // Pass the useFormik() hook initial form values and a submit function that will
@@ -28,6 +29,7 @@ const Footer = ()=>{
     // const contactBg = 'black'
     const textDecoration = { textDecoration: 'none' }
     return(
+        <ChakraProvider>
         <div className='footer'>
             <Box h={{base:'100%', sm:'100vh'}} bg={'#F6F6F6'} py={{base:'4', sm:'16'}} px={{base:'4', sm:'28'}}>
                 <Box display={{base:'block', sm:'flex'}} justifyContent={'center'} gap={'3'} px={{base:'10'}}>
@@ -120,6 +122,7 @@ const Footer = ()=>{
 
             
         </div>
+        </ChakraProvider>
     )
 }
 
