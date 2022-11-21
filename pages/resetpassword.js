@@ -12,16 +12,32 @@ import {
     InputLeftElement
   } 
 from '@chakra-ui/react'
+import Image from 'next/image'
 import NestedLayout from "../components/nestedlayout"
+import resetPasswordImage from '../public/Group 2037.svg'
+import { FaArrowLeft, FaEnvelope } from 'react-icons/fa'
 
-import {  FaEnvelope } from 'react-icons/fa'
 
 
 export default function ResetPassword() {
 const textDecoration = { textDecoration: 'none' }
   return (
     <div>
-         <Box display={'flex'} justifyContent={'center'} mt={{sm:'-2', base:'-20'}} px={{base:'4'}}>
+       <Box>
+            <Box display={{base:'none', sm:'block'}}><Image src={resetPasswordImage} alt='ContactImg' height={1000}/></Box>
+            <Box w={{base:'100%'}} pos={{sm:'absolute', base:'relative'}} top={{base:'3rem',sm:'4rem'}}>
+               <Box display={{sm:'flex'}} justifyContent={'space-between'} px={{sm:'110px', base:'4'}}>
+                <Box mt={'20px'} display={{sm:'block', base:'none'}}>
+                    <Heading ml={'-40px'} size='lg' fontWeight={'normal'}><Link fontWeight='semibold' href='/' display={'block'} _hover={textDecoration} >Logo</Link></Heading>
+                </Box>
+                <Box w={{sm:'20%'}} >
+                    <div className='arrow'>
+                    <Link  href='/'><FaArrowLeft color='gray.500' size='12'/></Link>
+                    </div>
+                </Box>
+                <Box mt={{base:'-6',sm:'0'}} fontSize={{base:'sm', sm:'md'}} pb={40} w={{sm:'30%'}} display={'flex'} justifyContent={'end'}>Not a member yet? <Link  href='/signup' ml={'10px'} _hover={textDecoration} borderBottom={'1px'} borderColor={'#068695'}><span> Sign Up</span></Link></Box>
+               </Box> 
+               <Box display={'flex'} justifyContent={'center'} mt={{sm:'-2', base:'-20'}} px={{base:'4'}}>
                     <Box display={'flex'} justifyContent={'center'} pl={{sm:'180px'}}>
                         <Box w={{sm:'55%', base:'100%'}}>
                             <Text fontWeight={'semibold'} fontSize={{base:'sm', sm:'md'}}>Enter the email address associated with your account and we’ll send you
@@ -68,7 +84,9 @@ const textDecoration = { textDecoration: 'none' }
                                 </Box>
                         </Box>
                     </Box>
-               </Box>
+        </Box>            
+            </Box> 
+        </Box>
     </div>
   )
 }

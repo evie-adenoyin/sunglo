@@ -18,7 +18,7 @@ import NestedLayout from '../components/nestedlayout';
 
 
 
-const OpenPositions = () => {
+const Careers = () => {
     const DisplayGrid = {base:'block', sm:'flex'}
     const AlignItems = {base:'center'}
     const HeaderFontSize = {base:'xl',sm:'3xl'}
@@ -153,11 +153,11 @@ const OpenPositions = () => {
   )
 }
 
-OpenPositions.getLayout = function getLayout(page) {
+Careers.getLayout = function getLayout(page) {
     return (
      <Layout>{page}</Layout> 
     )
   }
 
 
-export default OpenPositions
+export default Careers

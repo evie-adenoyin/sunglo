@@ -20,6 +20,7 @@ import {
 from '@chakra-ui/react'
 import {FaBars} from 'react-icons/fa'
 import { ChakraProvider } from '@chakra-ui/react'
+import { FaArrowRight } from 'react-icons/fa'
 
 const textDecoration = { textDecoration: 'none' }
 const Logo =()=>{
@@ -55,10 +56,11 @@ const NavDrawer =()=>{
                 <Box>
                 <Link href='/' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Home</Link>
                 <Link href='/about' display={'block'} w='100%' my={'6'} _hover={textDecoration} >About Us</Link>
-                <Link href='/whyus' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Why Us</Link>
-                <Link href='/projects' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Projects</Link>
-                <Link href='/howtoinvest' display={'block'} w='100%' my={'6'} _hover={textDecoration} >How To Invest</Link>
-                <Link href='/company' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Company</Link>
+                <Link href='/contact' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Contact Us</Link>
+                <Link href='/blog' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Sunglo Blog</Link>
+                <Link href='/FAQs' display={'block'} w='100%' my={'6'} _hover={textDecoration} >FAQs</Link>
+                <Link href='/resetpassword' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Reset password</Link>
+                <Link href='/changepassword' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Change password</Link>
                 <Link href='/openpositions' display={'block'} w='100%' my={'6'} _hover={textDecoration} >Careers</Link>
                 <Button
                   mt={'20px'}
@@ -70,7 +72,7 @@ const NavDrawer =()=>{
                   color='#4b4f56'
                   // w={'220px'}
                   boxShadow='9px 23px 34px rgba(5, 195, 221, 0.31)'
-                  >Get started
+                  ><Link  href='/signin' display={'flex'} justifyContent={'space-between'}><Text mr={'2'}>Sign In</Text> <Text mt={'1'}><FaArrowRight color='gray.500' size='12'/></Text></Link>
               </Button>
                 </Box>
             </DrawerBody>
@@ -104,16 +106,16 @@ export default function Navbar() {
         </Box>
         <Spacer />
         <Box  display={DesktopNavebar}>
-            <Link href='/about' w='100%' mx={'4'} _hover={textDecoration}>About Us</Link>
-            <Link href='/whyus'  w='100%' mx={'4'} _hover={textDecoration} >Why Us</Link>
-            <Link href='/projects' w='100%' mx={'4'} _hover={textDecoration} >Projects</Link>
-            <Link href='/howtoinvest' w='100%' mx={'4'} _hover={textDecoration} >How To Invest</Link>
-            <Link href='/company' w='100%' mx={'4'} _hover={textDecoration} >Company</Link>
+            <Link href='/' w='100%' mx={'4'} _hover={textDecoration}>Home</Link>
+            <Link href='/blog' w='100%' mx={'4'} _hover={textDecoration} >Blog</Link>
+            <Link href='/careers' w='100%' mx={'4'} _hover={textDecoration} >Careers</Link>
+            <Link href='/contact'  w='100%' mx={'4'} _hover={textDecoration} >Contact Us</Link>
+            <Link href='/FAQs' w='100%' mx={'4'} _hover={textDecoration} >FAQs</Link>
         </Box>
         <Spacer />
         <Box display={DesktopNavebar}>
         <ButtonGroup gap='1'>
-            <Button fontWeight='hairline' colorScheme='none' color='black'><Link w='100%'>Sign in</Link></Button>
+            <Button fontWeight='hairline' colorScheme='none' color='black'><Link w='100%' href='/signin'>Sign in</Link></Button>
             <Box
             as='button'
             px='40px'
